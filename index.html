@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior AI Engineer Talent Market Report — Netherlands | Abel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Martina Plantijn';
+      src: url('./fonts/martina-plantijn-regular.woff2') format('woff2'),
+           url('./fonts/MartinaPlantijn-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ============ RESET & BASE ============ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Abel Figma Design Tokens */
+      --text-primary: #222;
+      --text-secondary: #444;
+      --text-tertiary: #6a6a6a;
+      --text-white: #fff;
+
+      --surface-primary: #fff;
+      --surface-secondary: #f7f7f7;
+      --surface-dark: #222;
+      --surface-dark-green: #123323;
+
+      --border-secondary: #ddd;
+      --border-tertiary: #ebebeb;
+
+      --success-highlighted: #047c42;
+      --success-bg: #e7f3ee;
+      --success-alpha: rgba(4, 162, 13, 0.1);
+
+      --alpha-white-20: rgba(255,255,255,0.2);
+      --alpha-white-50: rgba(255,255,255,0.5);
+      --alpha-white-80: rgba(255,255,255,0.8);
+      --alpha-black-24: rgba(0,0,0,0.24);
+
+      --serif: 'Martina Plantijn', Georgia, serif;
+      --sans: 'Geist', system-ui, -apple-system, sans-serif;
+
+      /* Spacing */
+      --sp-1: 4px;
+      --sp-2: 8px;
+      --sp-3: 12px;
+      --sp-4: 16px;
+      --sp-6: 24px;
+      --sp-8: 32px;
+      --sp-10: 40px;
+
+      /* Radius */
+      --radius-2: 8px;
+      --radius-3: 12px;
+      --radius-4: 16px;
+      --radius-full: 999px;
+
+      /* Shadow */
+      --shadow-xs: 0px 1px 2px rgba(34,34,34,0.05);
+
+      --max-w: 960px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text-primary);
+      background: var(--surface-primary);
+      font-size: 16px;
+      line-height: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ============ NAV ============ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--alpha-white-80);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border-tertiary);
+      padding: 0 var(--sp-6);
+    }
+
+    .nav-inner {
+      max-width: 1216px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      transition: all 0.15s;
+      font-weight: 400;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+      background: var(--surface-secondary);
+    }
+
+    .nav-links a.active {
+      color: var(--text-primary);
+      font-weight: 500;
+      border: 1px solid var(--border-secondary);
+      background: var(--surface-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      transition: all 0.15s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-outline {
+      color: var(--text-primary);
+      border: 1px solid var(--border-secondary);
+      background: var(--surface-primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--surface-secondary);
+    }
+
+    .btn-primary {
+      background: var(--surface-dark);
+      color: var(--text-white);
+    }
+
+    .btn-primary:hover {
+      background: #333;
+    }
+
+    .btn-accent {
+      background: var(--success-highlighted);
+      color: var(--text-white);
+    }
+
+    .btn-accent:hover {
+      background: #036b37;
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: 80px var(--sp-6) 64px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--text-tertiary);
+      background: var(--surface-secondary);
+      border: 1px solid var(--border-tertiary);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--sp-6);
+      font-weight: 500;
+    }
+
+    .hero-eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--success-highlighted);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-4);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: var(--sp-10);
+    }
+
+    /* ============ STAT STRIP ============ */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border-tertiary);
+      border: 1px solid var(--border-tertiary);
+      border-radius: var(--radius-3);
+      overflow: hidden;
+      margin-bottom: 64px;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .stat-item {
+      background: var(--surface-primary);
+      padding: var(--sp-6);
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 32px;
+      line-height: 36px;
+      color: var(--text-primary);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--text-tertiary);
+      margin-top: var(--sp-1);
+    }
+
+    /* ============ CONTENT ============ */
+    .content {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--sp-6) 80px;
+    }
+
+    .section {
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      line-height: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--success-highlighted);
+      margin-bottom: var(--sp-3);
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-4);
+    }
+
+    .section p {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--text-secondary);
+      margin-bottom: var(--sp-4);
+    }
+
+    .section p strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ============ CARDS ============ */
+    .card {
+      background: var(--surface-primary);
+      border: 1px solid var(--border-tertiary);
+      border-radius: var(--radius-3);
+      padding: var(--sp-6);
+      margin-bottom: var(--sp-4);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-2);
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ============ TABLE ============ */
+    .table-wrapper {
+      border: 1px solid var(--border-tertiary);
+      border-radius: var(--radius-3);
+      overflow: hidden;
+      margin-bottom: var(--sp-6);
+      box-shadow: var(--shadow-xs);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    thead {
+      background: var(--surface-secondary);
+    }
+
+    th {
+      text-align: left;
+      padding: var(--sp-3) var(--sp-4);
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-tertiary);
+      border-bottom: 1px solid var(--border-tertiary);
+    }
+
+    td {
+      padding: var(--sp-3) var(--sp-4);
+      border-bottom: 1px solid var(--border-tertiary);
+      color: var(--text-primary);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background: var(--surface-secondary);
+    }
+
+    td .highlight {
+      color: var(--success-highlighted);
+      font-weight: 600;
+    }
+
+    /* ============ METRIC GRID ============ */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-4);
+      margin-bottom: var(--sp-6);
+    }
+
+    .metric-card {
+      background: var(--surface-primary);
+      border: 1px solid var(--border-tertiary);
+      border-radius: var(--radius-3);
+      padding: 20px;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .metric-value {
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 36px;
+      color: var(--text-primary);
+    }
+
+    .metric-title {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-secondary);
+      margin-top: var(--sp-1);
+      font-weight: 500;
+    }
+
+    .metric-subtitle {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+
+    /* ============ BAR CHART ============ */
+    .bar-chart {
+      margin-bottom: var(--sp-6);
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      margin-bottom: var(--sp-3);
+    }
+
+    .bar-label {
+      width: 140px;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-primary);
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 28px;
+      background: var(--surface-secondary);
+      border-radius: var(--radius-2);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--surface-dark);
+      border-radius: var(--radius-2);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: var(--sp-2);
+      transition: width 0.6s ease;
+    }
+
+    .bar-value {
+      font-size: 11px;
+      line-height: 14px;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .bar-fill.accent { background: var(--success-highlighted); }
+
+    /* ============ GEO CHART (DONUT) ============ */
+    .geo-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: var(--sp-8);
+      align-items: center;
+      margin-bottom: var(--sp-6);
+    }
+
+    .donut-container {
+      position: relative;
+      width: 180px;
+      height: 180px;
+    }
+
+    .donut-container svg {
+      transform: rotate(-90deg);
+    }
+
+    .donut-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .donut-center .big {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--text-primary);
+      display: block;
+    }
+
+    .donut-center .small {
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--text-tertiary);
+    }
+
+    .geo-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .geo-legend-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-tertiary);
+    }
+
+    .geo-legend-item:last-child {
+      border-bottom: none;
+    }
+
+    .geo-legend-label {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-primary);
+    }
+
+    .geo-legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .geo-legend-value {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* ============ CALLOUT ============ */
+    .callout {
+      background: var(--success-bg);
+      border: 1px solid #c6e7d5;
+      border-radius: var(--radius-3);
+      padding: 20px var(--sp-6);
+      margin-bottom: var(--sp-6);
+      display: flex;
+      gap: var(--sp-3);
+      align-items: flex-start;
+    }
+
+    .callout-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--success-highlighted);
+      margin-top: 2px;
+    }
+
+    .callout p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #1a5c32;
+      margin: 0;
+    }
+
+    .callout strong {
+      font-weight: 600;
+    }
+
+    /* ============ RECOMMENDATION CARDS ============ */
+    .rec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-4);
+    }
+
+    .rec-card {
+      background: var(--surface-primary);
+      border: 1px solid var(--border-tertiary);
+      border-radius: var(--radius-3);
+      padding: var(--sp-6);
+      transition: box-shadow 0.2s;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .rec-card:hover {
+      box-shadow: 0 4px 16px rgba(34,34,34,0.08);
+    }
+
+    .rec-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--surface-secondary);
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-3);
+    }
+
+    .rec-card h3 {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .rec-card p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--text-secondary);
+    }
+
+    /* ============ CTA SECTION ============ */
+    .cta-section {
+      background: var(--surface-dark-green);
+      border-radius: var(--radius-4);
+      padding: 64px 48px;
+      text-align: center;
+      margin: 64px auto;
+      max-width: var(--max-w);
+    }
+
+    .cta-section h2 {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      color: var(--text-white);
+      margin-bottom: var(--sp-3);
+    }
+
+    .cta-section h2 em {
+      font-style: italic;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--alpha-white-50);
+      margin-bottom: var(--sp-8);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: var(--sp-3);
+      justify-content: center;
+    }
+
+    .btn-white {
+      background: var(--surface-primary);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .btn-white:hover {
+      background: var(--surface-secondary);
+    }
+
+    .btn-ghost {
+      background: var(--alpha-white-20);
+      color: var(--text-white);
+      border: 1px solid var(--alpha-white-20);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      border-top: 1px solid var(--border-tertiary);
+      padding: var(--sp-8) var(--sp-6);
+    }
+
+    .footer-inner {
+      max-width: 1216px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .footer-sub {
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--text-tertiary);
+    }
+
+    .footer-text {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--text-tertiary);
+    }
+
+    /* ============ DIVIDER ============ */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border-tertiary);
+      margin: 48px 0;
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; line-height: 40px; }
+      .section h2 { font-size: 28px; line-height: 36px; }
+      .stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .metric-grid { grid-template-columns: 1fr; }
+      .rec-grid { grid-template-columns: 1fr; }
+      .geo-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .cta-section { padding: var(--sp-10) var(--sp-6); margin: var(--sp-10) var(--sp-4); }
+      .cta-section h2 { font-size: 28px; line-height: 36px; }
+      .cta-buttons { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div>
+        <a href="#" class="nav-logo">abel</a>
+        <span class="footer-sub" style="display:block; margin-top:-2px;">AI-powered hiring concierge</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">Candidates</a>
+        <a href="#">Companies</a>
+        <a href="#" class="active">Research</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-outline">Log in</a>
+        <a href="#" class="btn btn-primary">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      Market Research &middot; Netherlands
+    </div>
+    <h1>The Senior AI Engineer talent market in <em>Netherlands</em></h1>
+    <p class="hero-subtitle">The Netherlands hosts a deep but increasingly competitive pool of senior AI talent, with 73% of employers struggling to fill AI roles.</p>
+
+    <!-- STAT STRIP -->
+    <div class="stat-strip">
+      <div class="stat-item">
+        <div class="stat-number">300</div>
+        <div class="stat-label">Senior AI Engineer profiles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12,400</div>
+        <div class="stat-label">Open vacancies</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">73%</div>
+        <div class="stat-label">Employer struggle rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">&euro;100K+</div>
+        <div class="stat-label">Average total compensation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- ECOSYSTEM OVERVIEW -->
+    <div class="section">
+      <div class="section-label">Ecosystem Overview</div>
+      <h2>The Netherlands AI landscape</h2>
+      <p>The Netherlands hosts 8% of Europe's AI professionals, making it one of the continent's most concentrated AI talent markets. The country's unique position at the intersection of cutting-edge research and commercial application creates a vibrant ecosystem for senior AI engineers.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Location</th>
+              <th>AI Focus</th>
+              <th>Est. Team Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Booking.com</strong></td>
+              <td>Amsterdam</td>
+              <td>Recommendation systems, NLP</td>
+              <td><span class="highlight">200+</span></td>
+            </tr>
+            <tr>
+              <td><strong>ASML</strong></td>
+              <td>Eindhoven</td>
+              <td>Computer vision, predictive maintenance</td>
+              <td><span class="highlight">150+</span></td>
+            </tr>
+            <tr>
+              <td><strong>Philips</strong></td>
+              <td>Eindhoven</td>
+              <td>Healthcare AI, medical imaging</td>
+              <td><span class="highlight">120+</span></td>
+            </tr>
+            <tr>
+              <td><strong>Adyen</strong></td>
+              <td>Amsterdam</td>
+              <td>Fraud detection, risk modeling</td>
+              <td><span class="highlight">80+</span></td>
+            </tr>
+            <tr>
+              <td><strong>TomTom</strong></td>
+              <td>Amsterdam</td>
+              <td>Autonomous driving, mapping AI</td>
+              <td><span class="highlight">100+</span></td>
+            </tr>
+            <tr>
+              <td><strong>ING</strong></td>
+              <td>Amsterdam</td>
+              <td>Risk analytics, customer intelligence</td>
+              <td><span class="highlight">90+</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/>
+        </svg>
+        <p><strong>Research excellence:</strong> UvA's AMLab and TU Delft's AI labs are globally ranked, while the AI Factory Initiative has earmarked &euro;200M in Groningen for advanced AI infrastructure.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- PROFILE ANALYSIS -->
+    <div class="section">
+      <div class="section-label">Profile Analysis</div>
+      <h2>Who is the Netherlands Senior AI Engineer?</h2>
+      <p>Amsterdam dominates as the epicenter of AI talent, but emerging hubs in Eindhoven and Utrecht are growing rapidly due to proximity to deep-tech employers like ASML and Philips.</p>
+
+      <!-- Geo distribution -->
+      <div class="card" style="margin-bottom: 24px;">
+        <h3 style="margin-bottom: 16px;">Geographic Distribution</h3>
+        <div class="geo-grid">
+          <div class="donut-container">
+            <svg width="180" height="180" viewBox="0 0 180 180">
+              <circle cx="90" cy="90" r="70" fill="none" stroke="#ebebeb" stroke-width="20"/>
+              <circle cx="90" cy="90" r="70" fill="none" stroke="#222" stroke-width="20"
+                stroke-dasharray="187.3 252.7" stroke-dashoffset="0"/>
+              <circle cx="90" cy="90" r="70" fill="none" stroke="#047c42" stroke-width="20"
+                stroke-dasharray="37.4 402.6" stroke-dashoffset="-187.3"/>
+              <circle cx="90" cy="90" r="70" fill="none" stroke="#444" stroke-width="20"
+                stroke-dasharray="28.6 411.4" stroke-dashoffset="-224.7"/>
+              <circle cx="90" cy="90" r="70" fill="none" stroke="#6a6a6a" stroke-width="20"
+                stroke-dasharray="24.2 415.8" stroke-dashoffset="-253.3"/>
+              <circle cx="90" cy="90" r="70" fill="none" stroke="#ddd" stroke-width="20"
+                stroke-dasharray="162.8 277.2" stroke-dashoffset="-277.5"/>
+            </svg>
+            <div class="donut-center">
+              <span class="big">300</span>
+              <span class="small">Profiles</span>
+            </div>
+          </div>
+          <div class="geo-legend">
+            <div class="geo-legend-item">
+              <span class="geo-legend-label"><span class="geo-legend-dot" style="background:#222"></span> Amsterdam</span>
+              <span class="geo-legend-value">42.5%</span>
+            </div>
+            <div class="geo-legend-item">
+              <span class="geo-legend-label"><span class="geo-legend-dot" style="background:#047c42"></span> Utrecht</span>
+              <span class="geo-legend-value">8.5%</span>
+            </div>
+            <div class="geo-legend-item">
+              <span class="geo-legend-label"><span class="geo-legend-dot" style="background:#444"></span> The Hague</span>
+              <span class="geo-legend-value">6.5%</span>
+            </div>
+            <div class="geo-legend-item">
+              <span class="geo-legend-label"><span class="geo-legend-dot" style="background:#6a6a6a"></span> Eindhoven</span>
+              <span class="geo-legend-value">5.5%</span>
+            </div>
+            <div class="geo-legend-item">
+              <span class="geo-legend-label"><span class="geo-legend-dot" style="background:#ddd"></span> Other cities</span>
+              <span class="geo-legend-value">37.0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seniority & Specialization -->
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-value">55-65%</div>
+          <div class="metric-title">Senior level</div>
+          <div class="metric-subtitle">5+ years experience</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">11-15%</div>
+          <div class="metric-title">Staff+ level</div>
+          <div class="metric-subtitle">8+ years experience</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">3-5%</div>
+          <div class="metric-title">Principal level</div>
+          <div class="metric-subtitle">10+ years experience</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 8px;"><strong>Key specializations:</strong> Computer Vision (25-30%), Deep Learning (15-20%), GenAI/LLMs (8-10%).</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- TALENT FLOW -->
+    <div class="section">
+      <div class="section-label">Talent Flow &amp; Attrition</div>
+      <h2>Market dynamics and hiring challenges</h2>
+      <p>The Netherlands faces a structural talent shortage in AI, with demand far outstripping the pipeline of qualified candidates.</p>
+
+      <div class="metric-grid">
+        <div class="metric-card" style="border-left: 3px solid var(--success-highlighted);">
+          <div class="metric-value">73%</div>
+          <div class="metric-title">Employer struggle rate</div>
+          <div class="metric-subtitle">Difficulty filling AI roles</div>
+        </div>
+        <div class="metric-card" style="border-left: 3px solid #444;">
+          <div class="metric-value">12,400</div>
+          <div class="metric-title">Open vacancies</div>
+          <div class="metric-subtitle">vs 3,800 graduates annually</div>
+        </div>
+        <div class="metric-card" style="border-left: 3px solid #6a6a6a;">
+          <div class="metric-value">77%</div>
+          <div class="metric-title">South NL struggle rate</div>
+          <div class="metric-subtitle">Highest regional difficulty</div>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Challenge Area</th>
+              <th>Prevalence</th>
+              <th>Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AI Model & Application Development</strong></td>
+              <td><span class="highlight">19%</span></td>
+              <td>Hardest specific skill to hire for</td>
+            </tr>
+            <tr>
+              <td><strong>AI Literacy</strong></td>
+              <td><span class="highlight">16%</span></td>
+              <td>Broad organizational challenge</td>
+            </tr>
+            <tr>
+              <td><strong>General AI Hiring Difficulty</strong></td>
+              <td><span class="highlight">73%</span></td>
+              <td>Majority of employers affected</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- COMPENSATION -->
+    <div class="section">
+      <div class="section-label">Compensation Analysis</div>
+      <h2>What Senior AI Engineers earn in Netherlands</h2>
+      <p>Compensation varies significantly by seniority and employer type, with trading firms and big tech commanding substantial premiums.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Base Salary</th>
+              <th>Total Compensation</th>
+              <th>Experience</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Senior</strong></td>
+              <td>&euro;85K &ndash; &euro;120K</td>
+              <td><span class="highlight">&euro;100K &ndash; &euro;150K+</span></td>
+              <td>5+ years</td>
+            </tr>
+            <tr>
+              <td><strong>Staff</strong></td>
+              <td>&euro;100K &ndash; &euro;130K+</td>
+              <td><span class="highlight">&euro;130K &ndash; &euro;180K+</span></td>
+              <td>8+ years</td>
+            </tr>
+            <tr>
+              <td><strong>Principal</strong></td>
+              <td>&euro;120K &ndash; &euro;150K+</td>
+              <td><span class="highlight">&euro;150K &ndash; &euro;220K+</span></td>
+              <td>10+ years</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Employer comparison bars -->
+      <div class="card">
+        <h3 style="margin-bottom: 16px;">Employer Compensation Comparison</h3>
+        <div class="bar-chart">
+          <div class="bar-row">
+            <span class="bar-label">Optiver / IMC</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: 100%;">
+                <span class="bar-value">100%</span>
+              </div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Meta</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: 68%;">
+                <span class="bar-value">68%</span>
+              </div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Uber</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width: 58%;">
+                <span class="bar-value">58%</span>
+              </div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Booking.com</span>
+            <div class="bar-track">
+              <div class="bar-fill accent" style="width: 40%;">
+                <span class="bar-value">40%</span>
+              </div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">ASML</span>
+            <div class="bar-track">
+              <div class="bar-fill accent" style="width: 32%;">
+                <span class="bar-value">32%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 11px; line-height: 14px; color: var(--text-tertiary);">Relative to highest-paying employer (Optiver/IMC = 100%)</p>
+      </div>
+
+      <div class="callout">
+        <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/>
+        </svg>
+        <p><strong>30% tax ruling:</strong> The Dutch 30% ruling adds &euro;12K-15K in annual take-home pay for international hires, but reduces to 27% in 2027. Amsterdam commands a 28% premium over the national median.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- TALENT PIPELINE -->
+    <div class="section">
+      <div class="section-label">Talent Pipeline</div>
+      <h2>Where the next generation comes from</h2>
+      <p>The Netherlands has 14 university-level AI programs producing approximately 3,800 graduates annually. Key institutions include UvA, TU Delft, and TU Eindhoven, with the ICAI Network facilitating 50+ public-private research labs.</p>
+
+      <div class="metric-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="metric-card">
+          <div class="metric-value">3,800</div>
+          <div class="metric-title">Annual AI graduates</div>
+          <div class="metric-subtitle">From 14 university programs</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">62%</div>
+          <div class="metric-title">Graduate growth since 2022</div>
+          <div class="metric-subtitle">Still insufficient for demand</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <svg class="callout-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+        </svg>
+        <p><strong>Key signal:</strong> Despite 62% graduate growth since 2022, 3,800 annual graduates cannot meet 12,400+ open positions. This structural gap will continue to drive competition for senior talent.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- HIRING IMPLICATIONS -->
+    <div class="section">
+      <div class="section-label">Hiring Implications</div>
+      <h2>Recommendations for hiring teams</h2>
+      <p>Based on our analysis, here are key strategies for successfully hiring senior AI talent in the Netherlands.</p>
+
+      <div class="rec-grid">
+        <div class="rec-card">
+          <div class="rec-number">1</div>
+          <h3>Widen geographic search</h3>
+          <p>Look beyond Amsterdam. Utrecht, Eindhoven, and The Hague offer untapped senior talent at lower competition levels.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-number">2</div>
+          <h3>Offer top-quartile comp for Staff+</h3>
+          <p>Staff+ engineers expect &euro;130K-180K+ total comp. Trading firms set the benchmark&mdash;match or justify the gap.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-number">3</div>
+          <h3>Leverage the 30% ruling</h3>
+          <p>The 30% tax ruling remains a powerful tool for international hires. Act before the 2027 reduction to 27%.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-number">4</div>
+          <h3>Target emerging AI specializations</h3>
+          <p>GenAI/LLM specialists are still rare (8-10% of profiles). Early movers can capture this growing segment.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-number">5</div>
+          <h3>Prioritize international recruitment</h3>
+          <p>With only 3,800 domestic graduates, international pipelines are essential to meet demand at scale.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-number">6</div>
+          <h3>Move quickly</h3>
+          <p>73% of employers struggle to fill roles. Speed-to-offer is a competitive advantage in this market.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div style="padding: 0 24px;">
+    <div class="cta-section">
+      <h2>Running a <em>Senior AI Engineer</em> search in <em>Netherlands</em>?</h2>
+      <p>Let Abel connect you with the right candidates, faster.</p>
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-white">Start a search &rarr;</a>
+        <a href="#" class="btn btn-ghost">Learn more about Abel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="#" class="footer-logo">abel</a>
+        <span class="footer-sub" style="display:block;">AI-powered hiring concierge</span>
+      </div>
+      <span class="footer-text">&copy; 2026 Abel. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
